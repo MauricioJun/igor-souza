@@ -1028,6 +1028,7 @@ section.main_section_content > div.active + div.slide_images::before {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
+	padding: 0;
 }
 #Cursos .main_section_container figure {
 	margin: 0;
@@ -1087,6 +1088,7 @@ section.main_section_content > div.active + div.slide_images::before {
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	text-align: center;
+	padding: 0;
 }
 
 /* Agenda styles */
