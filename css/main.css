@@ -1303,6 +1303,7 @@ section.main_section_content > div.active + div.slide_images::before {
 	margin-right: auto;
 	margin-left: auto;
 	width: 90%;
+	display: contents;
 }
 #Mídia .main_section_container .article_content .card_button_link {
 	/*
