@@ -1197,7 +1197,8 @@ section.main_section_content > div.active + div.slide_images::before {
 	font-style: normal;
 	font-weight: 700;
 	font-size: 4rem;
-	line-height: 4.79rem;
+	/*line-height: 4.79rem;*/
+	line-height: normal;
 }
 
 /* Na Mídia styles */
