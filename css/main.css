@@ -955,7 +955,7 @@ section.main_section_content > div.active + div.slide_images::before {
 	padding-bottom: 3.5rem;
 	text-shadow: none;
 	box-shadow: none;
-	background-image: url("/imgs/portfolio_bkg.png");
+	background-image: url("imgs/portfolio_bkg.png");
 	background-color: #FFFFFF;
 	background-position: center top;
 	background-repeat: no-repeat;
