@@ -1098,7 +1098,8 @@ section.main_section_content > div.active + div.slide_images::before {
 	/*grid-template-columns: repeat(3, 1fr);*/
 	/*grid-template-rows: repeat(3, auto);*/
 	grid-template-columns: 1fr 79.75% 1fr;
-	grid-template-rows: 1fr 79.75%;
+	/*grid-template-rows: 1fr 79.75%;*/
+	grid-template-rows: 25% auto;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 	max-height: 986px;
