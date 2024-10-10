@@ -1358,6 +1358,9 @@ section.main_section_content > div.active + div.slide_images::before {
 	padding: 1rem 3.3rem;
 	max-width: 65%;
 }
+.button_white_link:hover {
+	background-color: #0056b3;
+}
 .button_blue {
 	display: flex;
 	flex-wrap: wrap;
