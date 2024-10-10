@@ -1049,7 +1049,8 @@ section.main_section_content > div.active + div.slide_images::before {
 	width: 0;
 	min-width: 0;
 	border-radius: 10px;
-	aspect-ratio: 436 / 487;
+	aspect-ratio: auto;
+	line-height: 0;
 }
 #Cursos .square_images_container figure img {
 	width: 100%;
