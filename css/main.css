@@ -1266,6 +1266,7 @@ section.main_section_content > div.active + div.slide_images::before {
 	display: grid;
 	grid-row: span 4;
 	grid-template-rows: subgrid;
+	grid-template-columns: inherit;
 	gap: 0;
 	transition: transform 0.3s ease;
 }
