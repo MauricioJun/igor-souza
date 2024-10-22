@@ -1998,7 +1998,7 @@ footer {
 	}
 	#main_menu_list.active_mobile_menu {
         flex-direction: column;
-        width: 100dvw;
+        width: -webkit-fill-available; /*100dvw;*/
         height: 100dvh;
         background-color: rgba(0, 0, 0, 80%);
         row-gap: 1rem;
@@ -2007,6 +2007,8 @@ footer {
         padding-top: 7.94%;
         position: fixed;
 		flex-flow: column;
+		justify-content: flex-start;
+		padding: 1rem 10.24% 1rem 10.24%;
 	}
 	.main_menu_list_item {
 		display: none;
@@ -2021,11 +2023,13 @@ footer {
         width: 100dvw;
         padding-right: 3rem;
 		*/
+        text-align: right;
+        width: 100%;
 	}
 	.active_mobile_menu #mobile_menu_icon {
         text-align: right;
-        width: 100dvw;
-        padding-right: 3rem;
+        width: 100%; /*100dvw;*/
+        /*padding-right: 3rem;*/
 	}
 	#mobile_menu_icon .deactive_bars {
 		display: none;
@@ -2060,6 +2064,7 @@ footer {
 		left: 0;
 		right: 0;
 		margin: auto;
+		background: linear-gradient(88.63deg, rgba(0, 142, 239, .8) 1.26%, rgba(37, 99, 255, .8) 98.74%);
 	}
 	#slidearea .caption_area h3  {
 		font-size: var(--font-size-64);
