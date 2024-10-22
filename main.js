@@ -30,7 +30,9 @@ document.querySelector(".main_icons_title")
 
 /* Script - Slideshow Carousel styles */
 var slideIndex = 0;
+/* New Blue styles
 showSlides();
+*/
 function showSlides() {
 	var i;
 	var slides = document.getElementsByClassName("mySlides");
