@@ -1070,7 +1070,8 @@ section.main_section_content > div.active + div.slide_images::before {
 	width: 100%;
 	opacity: 0;
 	transition: .5s ease;
-	background-color: rgba(0, 0, 0, 0.8);
+	/*background-color: rgba(0, 0, 0, 0.8);*/
+	background-color: var(--blue-background-color);
 }
 #Projetos .square_images_container figure:hover figcaption {
 	opacity: 1;
