@@ -942,7 +942,7 @@ section.main_section_content > div.active + div.slide_images::before {
 	display: inline-block;
 	transition: background-color 0.6s ease;
 	/* New Blue styles */
-	display: none;
+	/*display: none;*/
 }
 #slidearea .active {
 	background-color: #bbb;
