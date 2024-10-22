@@ -49,3 +49,49 @@ function showSlides() {
 	dots[slideIndex - 1].className += " active";
 	setTimeout(showSlides, 5000); // Change image every 3 seconds
 }
+
+document.querySelector("#mobile_menu_icon .main_menu_list_item_link")
+	.addEventListener("click", (mobmenushortcut) =>{
+		//console.log(mobmenushortcut);
+		//mobmenushortcut.target.classList.add("active");
+		//console.log(mobmenushortcut.target.parentNode.id);
+		//console.log(mobmenushortcut.target.classList);
+		//console.log(mobmenushortcut.target.scrollTop);
+		if (mobmenushortcut.target.classList.contains("fa-bars")) {
+			mobmenushortcut.target.classList.add("deactive_bars");
+			var iconx = document.querySelector("#mobile_menu_icon .main_menu_list_item_link .fa-x");
+			if (iconx.classList.contains("deactive_x")) {
+				iconx.classList.remove("deactive_x");
+			}
+			var mobmenuextend = document.querySelector("#main_menu_list");
+			mobmenuextend.classList.add("active_mobile_menu");
+
+			document.querySelectorAll('.main_menu_list_item_link').forEach(menulink => 
+				menulink.addEventListener('click', () => {
+					console.log(menulink.parentNode.parentNode.id);
+					if (menulink.parentNode.parentNode.classList.contains("active_mobile_menu") && !menulink.parentNode.id) {
+						document.querySelector(".deactive_bars").classList.remove("deactive_bars");
+						document.querySelector("#mobile_menu_icon .main_menu_list_item_link .fa-x").classList.add("deactive_x");
+						menulink.parentNode.parentNode.classList.remove("active_mobile_menu");
+					}
+				})
+			);
+
+		} else if (mobmenushortcut.target.classList.contains("fa-x")) {
+			mobmenushortcut.target.classList.add("deactive_x");
+			var iconbars = document.querySelector("#mobile_menu_icon .main_menu_list_item_link .fa-bars");
+			if (iconbars.classList.contains("deactive_bars")) {
+				iconbars.classList.remove("deactive_bars");
+			}
+			var mobmenuextend = document.querySelector("#main_menu_list");
+			mobmenuextend.classList.remove("active_mobile_menu");
+		}
+		/*
+		if (mobmenushortcut.target.parentNode.classList.contains("main_icons_active")) {
+			mobmenushortcut.target.parentNode.classList.remove("main_icons_active");
+		} else {
+			mobmenushortcut.target.parentNode.classList.add("main_icons_active");
+		}
+		*/
+	}
+);
