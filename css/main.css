@@ -813,7 +813,10 @@ section.main_section_content > div.active + div.slide_images::before {
 	height: 100%;
 }
 */
+/* New Blue styles
 .mySlides {display: none; height: 100%;}
+*/
+.mySlides {height: 100%;}
 #slidearea img {
 	/*vertical-align: middle;*/
 	width: 100%;
