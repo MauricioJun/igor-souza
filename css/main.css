@@ -733,11 +733,13 @@ section.main_section_content > div.active + div.slide_images::before {
 	/* New styles */
 	background: linear-gradient(88.63deg, #008EEF 1.26%, #2563FF 98.74%);
     border-radius: 20px;
-    transform: rotate(-2.04deg);
+    /*transform: rotate(-2.04deg);*/
+	transform: rotate(-2.04deg) translateY(-50%);
     padding: 2.8rem;
 	text-shadow: none;
 	box-shadow: none;
-	top: 13%;
+	/*top: 13%;*/
+	top: 50%;
 	max-width: 851px;
 }
 #slidearea .caption_area h3, #slidearea .caption_area h4, #slidearea .caption_area p {
@@ -2051,7 +2053,7 @@ footer {
 		/*width: 65%;*/
 		width: calc(100% - 20.48%);
 		/* New Blue styles */
-		top: 7%;
+		/*top: 7%;*/
 		left: 0;
 		right: 0;
 		margin: auto;
