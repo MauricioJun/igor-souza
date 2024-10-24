@@ -13,6 +13,7 @@ document.querySelector(".content_mask_gradient")
 );
 */
 
+/*
 document.querySelector(".main_icons_title")
 	.addEventListener("click", (elclick) =>{
 		//console.log(elclick);
@@ -27,6 +28,7 @@ document.querySelector(".main_icons_title")
 		}
 	}
 );
+*/
 
 /* Script - Slideshow Carousel styles */
 var slideIndex = 0;
