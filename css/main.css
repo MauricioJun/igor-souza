@@ -1154,6 +1154,8 @@ section.main_section_content > div.active + div.slide_images::before {
 	grid-column: 1 / -1;
 	grid-row: 1 / -1;
 	z-index: -1;
+	width: 100%;
+    height: 100%;
 }
 #Agenda .back_images figure {
 	margin: 0;
@@ -1184,7 +1186,7 @@ section.main_section_content > div.active + div.slide_images::before {
 	display: flex;
 	column-gap: 1rem;
 	align-items: center;
-	justify-content: center;
+	/*justify-content: center;*/
 	text-decoration: none;
 }
 #Lista-de-Eventos p strong span {
@@ -1768,6 +1770,7 @@ footer {
 		width: calc(100% - 4.6rem);
 		padding: 2.3rem;
 		background-color: var(--blue-80-background-color);
+		height: fit-content;
 	}
 	#Agenda h2.section_content_title {
 		/*font-size: 64px;*/
