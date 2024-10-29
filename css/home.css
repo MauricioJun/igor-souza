@@ -57,7 +57,8 @@
 	top: 35.48%;
 	left: 57.06%;
 	*/
-	width: calc(43.30% - 2.8rem);
+	/*width: calc(43.30% - 2.8rem);*/
+	width: 43.30%;
 	text-align: left;
 	/* New styles */
 	background: linear-gradient(88.63deg, #008EEF 1.26%, #2563FF 98.74%);
