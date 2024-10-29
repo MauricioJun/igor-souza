@@ -765,7 +765,8 @@ footer .contact-list li a i {
 		--font-size-16: max(11px, calc(16px * (600 / 1728)));
 	}
 	#main_menu_list {
-		column-gap: 1.3rem;
+		/*column-gap: 1.3rem;*/
+		column-gap: .8rem;
 	}
 }
 
