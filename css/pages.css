@@ -86,14 +86,18 @@
 .dots_up_bkg {
 	background-image: url("../imgs/background-dots.png");
 	background-repeat: no-repeat;
-  	background-position-x: 2.5rem;
+  	background-position-x: 4.5rem;
 	background-size: var(--dots-background-size);
 }
 .dots_down_left_bkg {
 	background-image: url("../imgs/background-dots.png");
 	background-repeat: no-repeat;
+	/*
 	background-position-y: 95%;
   	background-position-x: 2.5rem;
+	*/
+	background-position-y: 90%;
+    background-position-x: 4.5rem;
 	background-size: var(--dots-background-size);
 }
 .square_images_page_container {
