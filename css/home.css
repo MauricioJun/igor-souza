@@ -102,7 +102,7 @@
 	font-size: var(--font-size-24);
 	line-height: 120.99%;
 	/* or 29px */
-	color: #FFFFFF;
+	color: var(--blue-box-text-default-color);
 	padding: 0;
 	letter-spacing: normal;
 }
@@ -226,7 +226,7 @@
 	text-shadow: none;
 	box-shadow: none;
 	background-image: url("../imgs/portfolio_bkg.png");
-	background-color: #FFFFFF;
+	background-color: var(--main-content-background-color);
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -438,7 +438,7 @@
 	font-size: var(--font-size-32);
 	line-height: 1.58rem;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: var(--text-default-color);
 	padding: 0 0 .5rem 0;
 	letter-spacing: normal;
 }
@@ -492,7 +492,7 @@
 	padding-bottom: 3.5rem;
 	text-shadow: none;
 	box-shadow: none;
-	background-color: #FFFFFF;
+	background-color: var(--main-content-background-color);
 }
 #Mídia h2.section_content_title {
 	text-align: center;
@@ -608,7 +608,7 @@
 	padding-bottom: 3.5rem;
 	text-shadow: none;
 	box-shadow: none;
-	background-color: #FFFFFF;
+	background-color: var(--main-content-background-color);
 }
 .comunidade_button {
 	display: flex;
@@ -625,8 +625,10 @@
 	text-transform: uppercase;
 	margin: 0 auto;
 	padding: 2rem 2.3rem;
-	width: 47.4%;
-	max-width: calc(758px - 4.6rem);
+	/*width: 47.4%;*/
+	width: 50%;
+	/*max-width: calc(758px - 4.6rem);*/
+	max-width: 758px;
 	column-gap: 1.3rem;
 
 	background: linear-gradient(180deg, #008EEF 0%, #005189 100%);
@@ -637,13 +639,13 @@
 	line-height: 150%;
 	/* or 60px */
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: var(--blue-box-text-default-color);
 }
 .comunidade_button_link i.fa-telegram {
 	font-size: var(--font-size-170);
 	line-height: 85%;
 	color: #2AABEE;
-	background-color: #FFFFFF;
+	background-color: var(--main-content-background-color);
 	border-radius: 50%;
 	letter-spacing: normal;
 	display: flex;
@@ -651,7 +653,7 @@
 }
 .comunidade_button_link i.fa-circle {
 	font-size: 180px;
-	color: #FFFFFF;
+	color: var(--text-default-color);
 	border-radius: 50%;
 }
 
@@ -660,7 +662,7 @@
 	padding-bottom: 3.5rem;
 	text-shadow: none;
 	box-shadow: none;
-	background-color: #FFFFFF;
+	background-color: var(--main-content-background-color);
 }
 #Parceiros .article_content h2 {
     text-align: center;
