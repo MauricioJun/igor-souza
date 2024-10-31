@@ -292,6 +292,7 @@
 	grid-area: card-buttom;
 	align-items: center;
 	padding-bottom: 0;
+	justify-content: end;
 }
 .agenda_list_blue_box_container .article_page_content .card_button a {
 	background-color: unset;
