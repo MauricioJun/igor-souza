@@ -6,7 +6,7 @@
 	margin: 0 auto;
 	/*width: 79.75%;*/
 	width: 100%;
-	max-width: 1378px;
+	/*max-width: 1378px;*/
 	background-color: var(--main-content-background-color);
 }
 .main_section_page_content h2 {
@@ -58,7 +58,7 @@
 	margin: 0 auto;
 	margin-top: 6rem;
 	/*width: 79.75%;*/
-	max-width: 1378px;
+	/*max-width: 1378px;*/
 }
 .article_page_content {
 	margin: 0 auto;
