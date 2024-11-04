@@ -321,49 +321,29 @@ window.addEventListener('scroll',()=>{
 })
 
 /* GITHUB */
-function listImageFiles() {
-    // Defina o token e os detalhes do repositório
-	const token = "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";  // Insira seu token de autenticação do GitHub
-	const owner = "MauricioJun"; // Insira o nome do usuário ou organização
-	const repo = "igor-souza"; // Insira o nome do repositório
-	const path = "galeria/";  // Caminho da pasta no repositório
-    
-    // URL da API para acessar o conteúdo da pasta
-    const url = 'https://api.github.com/repos/MauricioJun/igor-souza/contents/galeria/';
+const token = "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";  // Insira seu token de autenticação do GitHub
+const owner = "MauricioJun"; // Insira o nome do usuário ou organização
+const repo = "igor-souza"; // Insira o nome do repositório
+const path = "galeria";  // Caminho da pasta no repositório
 
-    // Crie uma nova instância de XMLHttpRequest
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', url, true);
+const url = 'https://api.github.com/repos/${owner}/${repo}/contents/${path}';
 
-    // Defina o cabeçalho de autorização usando o token
-    //xhr.setRequestHeader('Authorization', 'Bearer ${token}');
-	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
-    xhr.setRequestHeader('Accept', 'application/vnd.github.v3+json');
+const xhr = new XMLHttpRequest();
+xhr.open("GET", url, true);
+xhr.setRequestHeader("Authorization", 'Bearer ${token}');
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        const files = JSON.parse(xhr.responseText);
+        
+        // Filtra apenas arquivos de imagem (jpg, png, gif, etc.)
+        const imageFiles = files.filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file.name));
 
-    // Configurar a função de retorno de chamada
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            // Análise dos dados JSON retornados
-            const files = JSON.parse(xhr.responseText);
+        imageFiles.forEach(file => {
+            console.log('Imagem: ${file.name}, URL: ${file.download_url}');
+        });
+    } else if (xhr.readyState === 4) {
+        console.error("Erro ao obter os arquivos:", xhr.statusText);
+    }
+};
 
-            // Filtre e liste os arquivos de imagem
-            const imageFiles = files.filter(file => {
-                return file.type === 'file' && /\.(jpg|jpeg|png|gif)$/i.test(file.name);
-            });
-
-            // Exibir o nome dos arquivos de imagem
-            imageFiles.forEach(file => {
-                console.log(file.name);
-            });
-        } else if (xhr.readyState === 4) {
-            console.error('Erro ao acessar a API:', xhr.statusText);
-        }
-    };
-
-    // Envie a solicitação
-    xhr.send();
-}
-
-// Execute a função
-listImageFiles();
-
+xhr.send();
