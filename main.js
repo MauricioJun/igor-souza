@@ -162,7 +162,7 @@ function closeGaleryOpenedImage_overlay() {
 /* GET Galeria folders images */
 function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 	console.log('page = ' + page + ' inicialImage = ' + inicialImage + ' numberOfImagesPerPage = ' + numberOfImagesPerPage);
-	
+	/*
 	const hash = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
 	const image = new Image;
 	image.className = 'article-list__item__image--loading';
@@ -171,9 +171,9 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 	image.onload = function() {
 		image.classList.remove('article-list__item__image--loading');
 	};
-	
+	*/
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "galeria", true);
+	xhr.open("GET", "https://api.github.com/repos/MauricioJun/igor-souza/contents/galeria/", true);
 	xhr.responseType = 'document';
 	xhr.onload = () => {
 		if (xhr.status === 200) {
