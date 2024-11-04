@@ -174,7 +174,8 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 	*/
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", "https://api.github.com/repos/MauricioJun/igor-souza/contents/galeria/", true);
-	xhr.responseType = 'document';
+	/*xhr.responseType = 'document';*/
+	xhr.responseType = 'text';
 	xhr.onload = () => {
 		if (xhr.status === 200) {
 			
