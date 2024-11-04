@@ -184,11 +184,15 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 			const imageFiles = files.filter(file => {
 				return file.type === 'file' && /\.(jpg|jpeg|png|gif)$/i.test(file.name);
 			});
+			imagesLengthAux = 0;
 			// Exibir o nome dos arquivos de imagem
 			imageFiles.forEach(file => {
 				console.log(file.name);
+				imagesLengthAux++;
 			});
-			
+			imagesLength = imagesLengthAux;
+			console.log(imagesLength);
+			/*
 			var elements = xhr.response.getElementsByTagName("a");
 			imagesLengthAux = 0;
 			for (x of elements) {
@@ -198,6 +202,8 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 			};
 			imagesLength = imagesLengthAux;
 			console.log(imagesLength);
+   			*/
+			
 			inicialImageAux = 0;
 			for (x of elements) {
 				if ( x.href.match(/\.(jpe?g|png|gif)$/) ) {
