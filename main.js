@@ -319,3 +319,31 @@ window.addEventListener('scroll',()=>{
 		//addPage(++page);
     }
 })
+
+/* GITHUB */
+const token = "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";  // Insira seu token de autenticação do GitHub
+const owner = "MauricioJun"; // Insira o nome do usuário ou organização
+const repo = "igor-souza"; // Insira o nome do repositório
+const path = "galeria";  // Caminho da pasta no repositório
+
+const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+const xhr = new XMLHttpRequest();
+xhr.open("GET", url, true);
+xhr.setRequestHeader("Authorization", `Bearer ${token}`);
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        const files = JSON.parse(xhr.responseText);
+        
+        // Filtra apenas arquivos de imagem (jpg, png, gif, etc.)
+        const imageFiles = files.filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file.name));
+
+        imageFiles.forEach(file => {
+            console.log(`Imagem: ${file.name}, URL: ${file.download_url}`);
+        });
+    } else if (xhr.readyState === 4) {
+        console.error("Erro ao obter os arquivos:", xhr.statusText);
+    }
+};
+
+xhr.send();
