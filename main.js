@@ -206,8 +206,9 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
    			*/
 			
 			inicialImageAux = 0;
-			for (x of elements) {
-				if ( x.href.match(/\.(jpe?g|png|gif)$/) ) {
+			//for (x of elements) {
+			imageFiles.forEach(file => {
+				//if ( x.href.match(/\.(jpe?g|png|gif)$/) ) {
 					inicialImageAux++;
 					if (inicialImage > imagesLength) {
 						endLoad = true;
@@ -226,7 +227,7 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 						console.log('inicialImage = ' + inicialImage);
 						const fetchImage = document.querySelectorAll('.square_images_galery_page_container figure');
 						let img = document.createElement("img");
-						img.src = x.href;
+						img.src = file.href;
 						//document.body.appendChild(img);
 						//container.appendChild(img);
 						console.log(img);
@@ -241,8 +242,9 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 						//return img;
 						break;
 					}
-				}
-			};
+				//}
+			});
+			//};
 		} else {
 			console.log('Request failed. Returned status of ' + xhr.status);
 		}
