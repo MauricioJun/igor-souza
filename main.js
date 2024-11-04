@@ -326,7 +326,7 @@ const owner = "MauricioJun"; // Insira o nome do usuário ou organização
 const repo = "igor-souza"; // Insira o nome do repositório
 const path = "galeria";  // Caminho da pasta no repositório
 
-const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+const url = 'https://api.github.com/repos/${owner}/${repo}/contents/${path}';
 
 const xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
