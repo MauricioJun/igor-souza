@@ -230,7 +230,7 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 	}
 	xhr.send();
 	
-	console.log(image);
+	//console.log(image);
 	//console.log(img);
 	//return image;
 }
