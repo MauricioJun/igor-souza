@@ -226,7 +226,7 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 						console.log('inicialImage = ' + inicialImage);
 						const fetchImage = document.querySelectorAll('.square_images_galery_page_container figure');
 						let img = document.createElement("img");
-						img.src = file.href;
+						img.src = file.path;
 						//document.body.appendChild(img);
 						//container.appendChild(img);
 						console.log(img);
@@ -338,31 +338,3 @@ window.addEventListener('scroll',()=>{
 		//addPage(++page);
     }
 })
-
-/* GITHUB */
-const token = "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";  // Insira seu token de autenticação do GitHub
-const owner = "MauricioJun"; // Insira o nome do usuário ou organização
-const repo = "igor-souza"; // Insira o nome do repositório
-const path = "galeria";  // Caminho da pasta no repositório
-
-const url = 'https://api.github.com/repos/MauricioJun/igor-souza/contents/galeria/';
-
-const xhr = new XMLHttpRequest();
-xhr.open("GET", url, true);
-xhr.setRequestHeader("Authorization", 'Bearer ' + token);
-xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        const files = JSON.parse(xhr.responseText);
-        
-        // Filtra apenas arquivos de imagem (jpg, png, gif, etc.)
-        const imageFiles = files.filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file.name));
-
-        imageFiles.forEach(file => {
-            console.log('Imagem: ${file.name}, URL: ${file.download_url}');
-        });
-    } else if (xhr.readyState === 4) {
-        console.error("Erro ao obter os arquivos:", xhr.statusText);
-    }
-};
-
-xhr.send();
