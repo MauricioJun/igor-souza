@@ -434,6 +434,50 @@
     transform: translate(-50%, -50%);
 	border: 2px solid #FFFFFF;
 }
+.download_list_blue_border_container {
+	margin: 0 auto;
+	width: 79.75%;
+	max-width: 1378px;
+	/*max-width: 1440px;*/
+	/*max-height: 728px;*/
+	background: var(--main-content-background-color);
+	/*border: 3px solid var(--blue-background-color);*/
+	/*
+	border-width: 3px;
+	border-style: solid;
+	border-image: linear-gradient(90deg, #008EEF 0%, #2461FF 100%) 1;
+	border-radius: 20px;
+	*/
+	background: linear-gradient(white, white) padding-box,
+	linear-gradient(90deg, #008EEF 0%, #2461FF 100%) border-box;
+	border-radius: 20px;
+	border: 3px solid transparent;
+
+	font-family: var(--font-family-overlay-text);
+	font-size: var(--font-size-24);
+	color: var(--blue-background-color);
+}
+.download_list_blue_border_container p, .download_list_blue_border_container a {
+	/*color: var(--text-default-color);*/
+	color: var(--blue-background-color);
+}
+.download_list_blue_border_container .next_previous {
+    border-bottom: 3px solid var(--blue-background-color);
+}
+.download_list_blue_border_container  .article_page_content {
+    border-bottom: 1px solid  var(--blue-background-color);
+}
+.download_list_blue_border_container .article_page_content .card_title a {
+    color: var(--blue-background-color);
+}
+.download_list_blue_border_container .article_page_content .card_button a {
+    background-color: unset;
+    border: 2px solid var(--blue-background-color);
+    border-radius: 0%;
+    font-family: var(--font-family-overlay-text);
+    font-size: var(--font-size-24);
+    color: var(--blue-background-color);
+}
 
 /* Responsive scaling using media queries */
 @media (max-width: 1200px) {
