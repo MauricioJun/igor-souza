@@ -177,6 +177,18 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 	xhr.responseType = 'document';
 	xhr.onload = () => {
 		if (xhr.status === 200) {
+			
+			// Análise dos dados JSON retornados
+			const files = JSON.parse(xhr.responseText);
+			// Filtre e liste os arquivos de imagem
+			const imageFiles = files.filter(file => {
+				return file.type === 'file' && /\.(jpg|jpeg|png|gif)$/i.test(file.name);
+			});
+			// Exibir o nome dos arquivos de imagem
+			imageFiles.forEach(file => {
+				console.log(file.name);
+			});
+			
 			var elements = xhr.response.getElementsByTagName("a");
 			imagesLengthAux = 0;
 			for (x of elements) {
