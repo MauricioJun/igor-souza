@@ -329,7 +329,7 @@ function listImageFiles() {
 	const path = "galeria/";  // Caminho da pasta no repositório
     
     // URL da API para acessar o conteúdo da pasta
-    const url = 'https://api.github.com/repos/${owner}/${repo}/contents/${path}';
+    const url = 'https://api.github.com/repos/MauricioJun/igor-souza/contents/galeria/';
 
     // Crie uma nova instância de XMLHttpRequest
     const xhr = new XMLHttpRequest();
@@ -365,3 +365,4 @@ function listImageFiles() {
 
 // Execute a função
 listImageFiles();
+
