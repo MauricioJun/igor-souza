@@ -349,7 +349,7 @@ const url = 'https://api.github.com/repos/MauricioJun/igor-souza/contents/galeri
 
 const xhr = new XMLHttpRequest();
 xhr.open("GET", url, true);
-xhr.setRequestHeader("Authorization", 'Bearer ${token}');
+xhr.setRequestHeader("Authorization", 'Bearer ' + token);
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
         const files = JSON.parse(xhr.responseText);
