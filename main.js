@@ -336,7 +336,8 @@ function listImageFiles() {
     xhr.open('GET', url, true);
 
     // Defina o cabeçalho de autorização usando o token
-    xhr.setRequestHeader('Authorization', 'Bearer ${token}');
+    //xhr.setRequestHeader('Authorization', 'Bearer ${token}');
+	xhr.setRequestHeader('Authorization', 'Bearer ' + token);
     xhr.setRequestHeader('Accept', 'application/vnd.github.v3+json');
 
     // Configurar a função de retorno de chamada
