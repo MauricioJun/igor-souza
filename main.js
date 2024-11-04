@@ -176,8 +176,8 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 	xhr.open("GET", "https://api.github.com/repos/MauricioJun/igor-souza/contents/galeria/", true);
 	/*xhr.responseType = 'document';*/
 	/*xhr.responseType = 'text';*/
-	xhr.onload = () => {
-		if (xhr.status === 200) {
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState === 4 && xhr.status === 200) {
 			
 			// Análise dos dados JSON retornados
 			const files = JSON.parse(xhr.responseText);
@@ -206,7 +206,7 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
    			*/
 			
 			inicialImageAux = 0;
-			for (x of imageFiles) {
+			for (file of imageFiles) {
 				//if ( x.href.match(/\.(jpe?g|png|gif)$/) ) {
 					inicialImageAux++;
 					if (inicialImage > imagesLength) {
@@ -226,7 +226,7 @@ function getArticleImage(page, inicialImage, numberOfImagesPerPage) {
 						console.log('inicialImage = ' + inicialImage);
 						const fetchImage = document.querySelectorAll('.square_images_galery_page_container figure');
 						let img = document.createElement("img");
-						img.src = x.href;
+						img.src = file.href;
 						//document.body.appendChild(img);
 						//container.appendChild(img);
 						console.log(img);
