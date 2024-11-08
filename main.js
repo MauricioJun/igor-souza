@@ -340,3 +340,19 @@ window.addEventListener('scroll',()=>{
 		//addPage(++page);
     }
 })
+
+document.querySelectorAll(".flex_2_images_for_script").forEach(async(elCont) => {
+
+	const elsImages = elCont.querySelectorAll("img");
+  
+	//stackoverflow.com/a/60949881/383904
+	await Promise.all([...elsImages].filter(img => !img.complete).map(img => new Promise(resolve => img.onload = img.onerror = resolve)));
+  
+	elsImages.forEach(elImg => {
+	  elImg.parentNode.style.setProperty("--w", elImg.naturalWidth);
+	  elImg.style.setProperty("--w", elImg.naturalWidth);
+	  elImg.parentNode.style.setProperty("--h", elImg.naturalHeight);
+	  elImg.style.setProperty("--h", elImg.naturalHeight);
+	});
+  
+  });
