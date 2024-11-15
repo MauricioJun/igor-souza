@@ -686,6 +686,11 @@
 #Parceiros .parceiros_images_container {
 	width: 79.75%;
 	margin: 0 auto;
+	/* Modificado */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 #Parceiros .parceiros_images_container figure {
 	display: flex;
@@ -696,9 +701,7 @@
 #Parceiros .parceiros_images_container figure a {
 	flex-grow: 1;
 	flex-shrink: 1;
-	/*
-	flex-basis: calc(79.75% / 3);
-	*/
+	flex-basis: calc(79.75% / 4);
 	text-align: center;
 	align-self: center;
 }
