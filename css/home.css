@@ -711,6 +711,7 @@
 #Parceiros .parceiros_images_container figure img {
 	width: auto;
 	object-position: center top;
+	margin: 0 auto;
 }
 
 /* Responsive scaling using media queries */
