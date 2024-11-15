@@ -664,6 +664,7 @@
 	text-shadow: none;
 	box-shadow: none;
 	background-color: var(--main-content-background-color);
+	text-align: center;
 }
 #Parceiros .article_content h2 {
     text-align: center;
@@ -691,9 +692,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+	gap: 2.03%;
 }
 #Parceiros .parceiros_images_container figure {
-	display: flex;
+	/*display: flex;*/
+	display: contents;
 	flex-wrap: wrap;
 	margin: 0 auto;
 	gap: 2.03%;
