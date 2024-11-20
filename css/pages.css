@@ -138,6 +138,8 @@
     opacity: 0;
     transition: .5s ease;
     background-color: var(--blue-background-color);
+    margin-bottom: 0;
+    margin-top: 0;
 }
 .square_images_page_container figure:hover figcaption {
 	opacity: 1;
