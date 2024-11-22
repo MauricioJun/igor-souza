@@ -526,7 +526,7 @@ footer .contact-list {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	gap: 1.5rem;
+	gap: .5rem;
 	border-left: 1px solid #FFFFFF;
 }
 footer .contact-list li {
