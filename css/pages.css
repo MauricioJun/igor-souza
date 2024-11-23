@@ -138,7 +138,7 @@
     opacity: 0;
     transition: .5s ease;
     background-color: var(--blue-background-color);
-    margin-bottom: 0;
+	margin-bottom: 0;
     margin-top: 0;
 }
 .square_images_page_container figure:hover figcaption {
@@ -751,7 +751,13 @@ figure.margin_left_auto {
 .two_rows_images > img {
 	margin-bottom: 1rem;
 }
+.two_rows_images > figure {
+	margin-bottom: 1rem;
+}
 .two_rows_images img:last-of-type {
+    width: 81.24%;
+}
+.two_rows_images figure:last-of-type {
     width: 81.24%;
 }
 .grid-column-start-3-span-3{
@@ -777,6 +783,16 @@ figure.margin_left_auto {
 	width: 90%;
 	margin: 0 auto !important;
 }
+.flex_row figure {
+	display: flex;
+	text-align: center;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+	flex-grow: calc(var(--w) / var(--h));
+}
 .flex_row a {
 	display: flex;
 	text-align: center;
@@ -786,6 +802,18 @@ figure.margin_left_auto {
     padding: 0;
     line-height: 0;
 	flex-grow: calc(var(--w) / var(--h));
+}
+.flex_row figure a {
+    display: flex;
+    text-align: center;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    /* flex-grow: calc(var(--w) / var(--h)); */
+    width: 100%;
+    height: 100%;
 }
 .flex_row img {
 	/*
@@ -801,6 +829,16 @@ figure.margin_left_auto {
     line-height: 0;
 	width: 100%;
 	/*flex-grow: calc(var(--w) / var(--h));*/
+}
+.flex_row figure a img {
+    text-align: center;
+    width: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    width: 100%;
+    /* flex-grow: calc(var(--w) / var(--h)); */
 }
 .link_color_default a {
 	color: var(--text-default-color);
@@ -949,6 +987,9 @@ figure.margin_left_auto {
 	.two_rows_images img:last-of-type {
 		width: 100%;
 	}
+	.two_rows_images figure:last-of-type {
+		width: 100%;
+	}
 
 	.grid_5_5 {
 		grid-template-columns: 1fr;
@@ -994,6 +1035,9 @@ figure.margin_left_auto {
 		width: 81.24%;
 		width: 100%;
 	}
+	.two_rows_images figure:last-of-type {
+		width: 100%;
+	}
 	.grid-column-start-3-span-3{
 		grid-column: 3 / span 3;
 		grid-column: auto;
@@ -1019,6 +1063,9 @@ figure.margin_left_auto {
 	.flex_row img {
 		width: 100%;
 		height: 100%;
+	}
+	.flex_row figure {
+		width: 100%;
 	}
 }
 
